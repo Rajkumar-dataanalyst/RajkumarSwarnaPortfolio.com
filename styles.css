@@ -8,12 +8,7 @@
   --text-light: #fff;
 }
 
-/* 🔽 Add this block below :root */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
+body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -21,8 +16,6 @@ html, body {
   color: var(--text-light);
   background: var(--background-dark);
   scroll-behavior: smooth;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body.light-mode {
@@ -171,8 +164,8 @@ body.light-mode #home {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;
-  padding-top: 60px; /* Or even 80px or 60px */
+  gap: 100px;
+  padding-top: 10px; /* Or even 80px or 60px */
 }
 
 
@@ -951,28 +944,5 @@ body.light-mode .top-bar {
     flex-shrink: 0;
     margin-left: 10px;
   }
-}
-
-
-/* Hide vertical scrollbar but allow scrolling */
-body {
-  overflow-y: scroll;
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE 10+ */
-}
-
-body::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari, Edge */
-}
-
-
-/* Prevent horizontal overflow on all sections */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
