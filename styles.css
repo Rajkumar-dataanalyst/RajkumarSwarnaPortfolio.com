@@ -185,7 +185,7 @@ body.light-mode #home {
   align-items: flex-start;
   justify-content: space-between;
   gap: 100px;
-  padding-top: 0rem; /* Or even 80px or 60px */
+  padding-top: 1rem; /* Or even 80px or 60px */
 }
 
 
@@ -919,7 +919,6 @@ body.light-mode .top-bar {
 
 .toggle-container {
   flex-shrink: 0;
-  margin-left: auto;
 }
 
 
