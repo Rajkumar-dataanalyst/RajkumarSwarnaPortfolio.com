@@ -100,14 +100,15 @@ body.light-mode .full-page {
 /* Section Boxes at the Top */
 .section-boxes {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 10px;
-  background: var(--background-dark);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+.section-boxes::-webkit-scrollbar {
+  display: none;
 }
 
 body.light-mode .section-boxes {
