@@ -115,8 +115,8 @@ body.light-mode .section-boxes {
 }
 
 .section-box {
-  width: 100px;
-  height: 50px;
+  width: 80px;
+  height: 30px;
   background: var(--primary-color);
   color: #000;
   display: flex;
@@ -142,7 +142,8 @@ body.light-mode .section-boxes {
 /* Theme Toggle Icon */
 .theme-icon {
   position: absolute;
-  right: 20px;
+  top: 5px;          /* Add this line to move it upward */
+  right: 10px;
   background: none;
   border: none;
   cursor: pointer;
@@ -152,6 +153,7 @@ body.light-mode .section-boxes {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(14, 239, 255, 0.5);
 }
+
 
 .theme-icon:hover {
   transform: scale(1.1);
@@ -181,9 +183,10 @@ body.light-mode #home {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;
-  padding-top: 2in;
+  gap: 100px;
+  padding-top: 0rem; /* Or even 80px or 60px */
 }
+
 
 .home-text {
   flex: 1;
