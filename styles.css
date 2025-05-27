@@ -854,15 +854,23 @@ footer p {
 
 .top-bar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: var(--background-dark);
+  overflow-x: auto;
+  gap: 10px;
   padding: 10px 20px;
+  background: var(--background-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap;
+  white-space: nowrap;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
 }
+
+.top-bar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 
 body.light-mode .top-bar {
   background: var(--background-light);
@@ -872,8 +880,21 @@ body.light-mode .top-bar {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
 }
+
+.section-boxes::-webkit-scrollbar {
+  display: none;
+}
+
+.section-boxes {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
 
 .section-box {
   padding: 10px 15px;
@@ -893,8 +914,10 @@ body.light-mode .top-bar {
 }
 
 .toggle-container {
+  flex-shrink: 0;
   margin-left: auto;
 }
+
 
 .theme-icon {
   font-size: 1.5em;
