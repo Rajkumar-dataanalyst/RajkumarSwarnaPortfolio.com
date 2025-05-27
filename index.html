@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raj Kumar Swarna's Data Analyst Portfolio showcasing skills, projects, and contact information.">
+  <title>Raj Kumar Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Section Boxes at the Top -->
+  <div class="top-bar">
+  <div class="section-boxes">
+    <div class="section-box" data-target="home">Home</div>
+    <div class="section-box" data-target="about">About</div>
+    <div class="section-box" data-target="skills">Skills</div>
+    <div class="section-box" data-target="projects">Projects</div>
+    <div class="section-box" data-target="contact">Contact</div>
+  </div>
+  <button id="theme-toggle" class="theme-icon" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+</div>
+
+
+  <!-- Home Section -->
+<section id="home" class="full-page">
+  <div class="container home-container">
+    <div class="home-text">
+      <h2 class="highlight">Hi, I'm Raj Kumar Swarna</h2>
+      <h3 class="highlight">Welcome to My Portfolio!</h3>
+      <p>
+        I am a passionate and enthusiastic Data Analyst with a knack for solving
+        problems and uncovering meaningful insights from data.
+      </p>
+      <p>
+        With a strong learning mindset and dedication to transforming data into
+        impactful insights, I strive to drive success. Discover my skills,
+        projects, and journey to see how I can add value to your organization.
+      </p>
+      <!-- RESUME Button and Social Icons -->
+      <div class="home-buttons">
+        <a href="Rajkumar_Resume.pdf" class="resume-btn" download>RESUME</a>
+        <a href="https://github.com/Rajkumar-dataanalyst" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/raj-kumar-swarna-629857269/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="home-image">
+      <img src="photo.png" alt="Raj Kumar Swarna's Profile Picture" class="profile-img">
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="full-page">
+    <div class="container">
+      <h2 class="highlight">About Me</h2>
+      <p>I am a passionate and driven BTech student at Gayatri Vidya Parishad College of Engineering, Visakhapatnam, pursued CSE (Data Science) 2021-2025 batch. My academic journey has ignited my fascination with data science, and I am deeply inspired by the power of data to drive meaningful decisions and solve real-world problems.</p>
+      <p>From a young age, I’ve been captivated by the idea of transforming raw data into actionable insights. Whether it’s analyzing trends, building predictive models, or creating interactive dashboards, I find joy in uncovering the stories hidden within numbers. My coursework and projects have equipped me with a strong foundation in programming, statistics, and machine learning, and I’m constantly exploring new tools and techniques to expand my expertise.</p>
+      <p>I have a keen interest in data <span class="highlight">visualization</span> and enjoy crafting compelling dashboards using tools like <span class="highlight">Tableau</span> and <span class="highlight">Power BI</span>. I believe effective visualization is key to making data accessible and understandable for everyone, from technical teams to business stakeholders. Additionally, I’m proficient in <span class="highlight">Python</span> and <span class="highlight">R</span> for data analysis and have hands-on experience with <span class="highlight">SQL</span> for database management.</p>
+    </div>
+  </section>
+
+ <!-- Skills Section -->
+<section id="skills" class="full-page">
+  <div class="container">
+    <h2 class="highlight">Skills</h2>
+    <div class="skills-grid">
+      <!-- Python -->
+      <div class="skill-card">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+        <p>Pandas, NumPy, Matplotlib, Seaborn</p>
+      </div>
+
+      <!-- Excel -->
+      <div class="skill-card">
+        <i class="fas fa-file-excel"></i>
+        <h3>Excel</h3>
+        <p>Data Analysis, Pivot Tables, Macros</p>
+      </div>
+
+      <!-- Power BI -->
+      <div class="skill-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Power BI</h3>
+        <p>Reports, Data Modeling</p>
+      </div>
+
+      <!-- Tableau -->
+      <div class="skill-card">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Tableau</h3>
+        <p>Dashboards, Data Visualization</p>
+      </div>
+
+      <!-- Machine Learning -->
+      <div class="skill-card">
+        <i class="fas fa-brain"></i>
+        <h3>Machine Learning</h3>
+        <p>Regression Analysis, Clustering for Segmentation, Decision Trees</p>
+      </div>
+
+      <!-- R -->
+      <div class="skill-card">
+        <i class="fab fa-r-project"></i>
+        <h3>R</h3>
+        <p>Statistical Analysis</p>
+      </div>
+
+      <!-- MySQL -->
+      <div class="skill-card">
+        <i class="fas fa-database"></i>
+        <h3>MySQL</h3>
+        <p>Database Management, Querying</p>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="skill-card">
+        <i class="fas fa-layer-group"></i>
+        <h3>MongoDB</h3>
+        <p>NoSQL, Data Storage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="full-page">
+    <div class="container">
+      <h2 class="highlight">Projects</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all"><i class="fas fa-th-large"></i> All</button>
+        <button class="filter-btn" data-filter="excel"><i class="fas fa-file-excel"></i> Excel</button>
+        <button class="filter-btn" data-filter="powerbi"><i class="fas fa-chart-line"></i> Power BI</button>
+        <button class="filter-btn" data-filter="tableau"><i class="fas fa-chart-bar"></i> Tableau</button>
+      </div>
+      <div class="project-grid" id="project-grid">
+        <!-- Projects will be dynamically loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="full-page">
+  <div class="container">
+    <h2 class="highlight">Let's Connect!</h2>
+    <p class="contact-description">
+      Feel free to reach out to me via the form below or through any of my social media platforms.
+    </p>
+
+    <!-- Contact Form -->
+    <form id="contact-form" class="contact-form">
+      <input type="hidden" name="access_key" value="95468929-bc8c-4be7-b952-99dd91571c7f">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <input type="checkbox" name="botcheck" style="display: none;">
+      <button type="submit" class="submit-btn">Send Message</button>
+      <div id="form-result" class="loading"></div>
+    </form>
+    
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://wa.me/9392460314" class="social-link" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+      <a href="https://x.com/Rajkuma25055663" class="social-link" target="_blank">
+        <i class="fab fa-twitter"></i>
+        <span>Twitter</span>
+      </a>
+      <a href="https://www.instagram.com/swarna.rajkumar.71/?hl=en" class="social-link" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.linkedin.com/in/raj-kumar-swarna-629857269/" class="social-link" target="_blank">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wave"></div>
+    <p>&copy; <span id="year"></span> Raj Kumar Swarna. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
