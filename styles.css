@@ -847,7 +847,7 @@ footer p {
 
 
 
-/* ---------- Responsive Fix: Keep section boxes horizontal and fix layout ---------- */
+/* ================= Sticky Top Navigation with Toggle on Right ================= */
 
 .top-bar {
   display: flex;
@@ -873,11 +873,24 @@ body.light-mode .top-bar {
 }
 
 .section-box {
-  width: auto;
-  height: auto;
   padding: 10px 15px;
   font-size: 1em;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(14, 239, 255, 0.5);
+}
+
+.toggle-container {
+  margin-left: auto;
 }
 
 .theme-icon {
@@ -897,72 +910,27 @@ body.light-mode .top-bar {
   box-shadow: 0 0 20px rgba(14, 239, 255, 0.9);
 }
 
-/* Additional responsive adjustments for layout */
+/* Ensure space between top bar and first section */
+.full-page {
+  padding-top: 100px !important;
+}
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .home-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding-top: 60px;
+  .section-boxes {
+    justify-content: center;
   }
 
-  .home-text {
-    max-width: 100%;
-    margin: 0;
-    padding: 0 10px;
-  }
-
-  .home-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .social-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .container {
-    padding: 10px;
+  .toggle-container {
+    margin-top: 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-text h2.highlight {
-    font-size: 1.6em;
-    white-space: normal;
-    border: none;
-    animation: none;
-  }
-
-  .home-text h3.highlight {
-    font-size: 1.3em;
-  }
-
-  .profile-img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .section-box {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-}
-
