@@ -958,3 +958,14 @@ body::-webkit-scrollbar {
   display: none;                /* Chrome, Safari, Edge */
 }
 
+
+/* Prevent horizontal overflow on all sections */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
