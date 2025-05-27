@@ -855,17 +855,20 @@ footer p {
 .top-bar {
   display: flex;
   align-items: center;
-  overflow-x: auto;
   gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
   padding: 10px 20px;
   background: var(--background-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
-  white-space: nowrap;
-  scrollbar-width: none;       /* Firefox */
-  -ms-overflow-style: none;    /* IE 10+ */
 }
+
+.top-bar::-webkit-scrollbar {
+  display: none;
+}
+
 
 .top-bar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
