@@ -853,18 +853,28 @@ footer p {
 
 /* ================= Sticky Top Navigation with Toggle on Right ================= */
 
-/* ========== Updated Header Navigation Styles ========== */
 .top-bar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
   padding: 10px 20px;
   background: var(--background-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
-  overflow-x: hidden;
 }
+
+.top-bar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.top-bar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 
 body.light-mode .top-bar {
   background: var(--background-light);
@@ -877,29 +887,27 @@ body.light-mode .top-bar {
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
-  flex: 1;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .section-boxes::-webkit-scrollbar {
-  display: none; /* Hide scrollbar on Chrome/Safari */
+  display: none;
 }
 
 .section-boxes {
-  scrollbar-width: none; /* Hide scrollbar on Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar on IE 10+ */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 }
+
 
 .section-box {
   padding: 10px 15px;
-  font-size: 0.95em;
+  font-size: 1em;
   border-radius: 5px;
   background: var(--primary-color);
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -909,23 +917,18 @@ body.light-mode .top-bar {
   box-shadow: 0 5px 15px rgba(14, 239, 255, 0.5);
 }
 
-.section-box.active {
-  background: #0CC;
-  color: #000;
-}
-
 .toggle-container {
   flex-shrink: 0;
-  margin-left: 10px;
 }
+
 
 .theme-icon {
   font-size: 1.5em;
-  padding: 10px;
-  border-radius: 50%;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
   color: var(--primary-color);
   box-shadow: 0 0 10px rgba(14, 239, 255, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -936,145 +939,27 @@ body.light-mode .top-bar {
   box-shadow: 0 0 20px rgba(14, 239, 255, 0.9);
 }
 
+/* Ensure space between top bar and first section */
+.full-page {
+  padding-top: 100px !important;
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  /* First row: 3 boxes + toggle */
-  .section-row-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .section-row-top .section-box {
-    flex: 1;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.9em;
-  }
-
-  .toggle-container {
-    flex-shrink: 0;
-  }
-
-  .theme-icon {
-    font-size: 1.2em;
-    padding: 8px;
-    box-shadow: 0 0 8px rgba(14, 239, 255, 0.4);
-  }
-
-  /* Second row: 2 boxes aligned like inverted triangle */
-  .section-row-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .section-row-bottom .section-box {
-    flex: 1;
-    max-width: 100px;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.9em;
-  }
-}
-
-
-/* ========== MOBILE (max-width: 768px) ========== */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .section-row-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .section-row-top .section-box {
-    flex: 1;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.9em;
-  }
-
-  .toggle-container {
-    flex-shrink: 0;
-  }
-
-  .theme-icon {
-    font-size: 1.2em;
-    padding: 8px;
-    box-shadow: 0 0 8px rgba(14, 239, 255, 0.4);
-  }
-
-  .section-row-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .section-row-bottom .section-box {
-    flex: 1;
-    max-width: 100px;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.9em;
-  }
-}
-
-/* ========== LAPTOP/DESKTOP ========== */
-@media (min-width: 769px) {
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
   .section-boxes {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    flex: 1;
-  }
-
-  .section-box {
-    white-space: nowrap;
-    padding: 10px 15px;
-    font-size: 1em;
-    border-radius: 5px;
-    background: var(--primary-color);
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
+    justify-content: center;
   }
 
   .toggle-container {
-    flex-shrink: 0;
-    margin-left: 20px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .theme-icon {
-    font-size: 1.5em;
-    padding: 10px;
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
