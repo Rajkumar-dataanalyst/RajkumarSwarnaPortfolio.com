@@ -948,35 +948,50 @@ body.light-mode .top-bar {
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: stretch;
     padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    gap: 10px;
   }
 
-  .section-boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 boxes in top row */
-    row-gap: 10px;
-    column-gap: 10px;
+  /* First row: 3 boxes + toggle */
+  .section-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
     width: 100%;
   }
 
-  .section-box {
-    width: 100%;
+  .section-row-top .section-box {
+    flex: 1;
     text-align: center;
+    padding: 8px 0;
+    font-size: 0.9em;
   }
 
   .toggle-container {
-    align-self: flex-end;
-    padding-right: 10px;
+    flex-shrink: 0;
   }
 
   .theme-icon {
-    font-size: 1.2em;     /* Reduced icon size */
+    font-size: 1.2em;
     padding: 8px;
     box-shadow: 0 0 8px rgba(14, 239, 255, 0.4);
+  }
+
+  /* Second row: 2 boxes aligned like inverted triangle */
+  .section-row-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .section-row-bottom .section-box {
+    flex: 1;
+    max-width: 100px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9em;
   }
 }
