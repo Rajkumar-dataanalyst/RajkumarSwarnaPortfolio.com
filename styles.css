@@ -947,22 +947,36 @@ body.light-mode .top-bar {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .top-bar {
-    flex-direction: row;        /* Keep row layout */
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
   .section-boxes {
-    flex-direction: row;
-    flex: 1;
-    gap: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes in top row */
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 100%;
+  }
+
+  .section-box {
+    width: 100%;
+    text-align: center;
   }
 
   .toggle-container {
-    flex-shrink: 0;
-    padding-left: 10px;
+    align-self: flex-end;
+    padding-right: 10px;
   }
+
+  .theme-icon {
+    font-size: 1.2em;     /* Reduced icon size */
+    padding: 8px;
+    box-shadow: 0 0 8px rgba(14, 239, 255, 0.4);
+  }
+}
