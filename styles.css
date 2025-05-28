@@ -853,28 +853,18 @@ footer p {
 
 /* ================= Sticky Top Navigation with Toggle on Right ================= */
 
+/* ========== Updated Header Navigation Styles ========== */
 .top-bar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  overflow-x: auto;
-  white-space: nowrap;
   padding: 10px 20px;
   background: var(--background-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow-x: hidden;
 }
-
-.top-bar::-webkit-scrollbar {
-  display: none;
-}
-
-
-.top-bar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
 
 body.light-mode .top-bar {
   background: var(--background-light);
@@ -887,27 +877,29 @@ body.light-mode .top-bar {
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
-  padding-bottom: 10px;
+  flex: 1;
+  padding-bottom: 5px;
 }
 
 .section-boxes::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hide scrollbar on Chrome/Safari */
 }
 
 .section-boxes {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar on IE 10+ */
 }
-
 
 .section-box {
   padding: 10px 15px;
-  font-size: 1em;
+  font-size: 0.95em;
   border-radius: 5px;
   background: var(--primary-color);
   color: #000;
   font-weight: bold;
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -917,18 +909,23 @@ body.light-mode .top-bar {
   box-shadow: 0 5px 15px rgba(14, 239, 255, 0.5);
 }
 
-.toggle-container {
-  flex-shrink: 0;
+.section-box.active {
+  background: #0CC;
+  color: #000;
 }
 
+.toggle-container {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
 
 .theme-icon {
   font-size: 1.5em;
+  padding: 10px;
+  border-radius: 50%;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
   color: var(--primary-color);
   box-shadow: 0 0 10px rgba(14, 239, 255, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -939,10 +936,6 @@ body.light-mode .top-bar {
   box-shadow: 0 0 20px rgba(14, 239, 255, 0.9);
 }
 
-/* Ensure space between top bar and first section */
-.full-page {
-  padding-top: 100px !important;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
