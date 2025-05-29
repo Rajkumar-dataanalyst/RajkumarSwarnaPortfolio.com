@@ -5,8 +5,9 @@ document.querySelectorAll('.section-box').forEach(box => {
     const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
-      const offset = 0; // No offset for sticky header
-      const targetPosition = targetSection.offsetTop - offset;
+      const topBarHeight = document.querySelector('.top-bar').offsetHeight;
+      const targetPosition = targetSection.offsetTop - topBarHeight;
+
 
       setTimeout(() => {
         window.scrollTo({
