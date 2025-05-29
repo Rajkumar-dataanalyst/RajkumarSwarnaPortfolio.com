@@ -106,42 +106,42 @@ const projects = [
     title: "Excel Dashboard - Sales Analysis",
     description: "Created an interactive sales dashboard using Excel.",
     image: "excel1.png",
-    link: "https://github.com/Rajkumar-dataanalyst/Excel_Dashboard/blob/main/README.md",
+    link: "https://github.com/Rajkumar-dataanalyst/Excel_Dashboard",
     category: "excel"
   },
   {
     title: "Excel Dashboard - FnP Sales Analysis",
     description: "Built an Analyzed report dashboard with pivot tables and charts.",
     image: "excel2.png",
-    link: "https://github.com/Rajkumar-dataanalyst/fnp-Sales-Analysis/blob/main/README.md",
+    link: "https://github.com/Rajkumar-dataanalyst/fnp-Sales-Analysis",
     category: "excel"
   },
   {
     title: "Power BI Dashboard - Facebook Ads Analytics",
     description: "Visualized FB-Ads Trends and Analysis.",
     image: "powerbi1.png",
-    link: "https://github.com/Rajkumar-dataanalyst/FB_Ads-Analysis/blob/main/README.md",
+    link: "https://github.com/Rajkumar-dataanalyst/FB_Ads-Analysis",
     category: "powerbi"
   },
   {
     title: "Power BI Dashboard - Financial Analytics",
     description: "Analyzed the Financial Status.",
     image: "powerbi2.png",
-    link: "https://github.com/Rajkumar-dataanalyst/PowerBi_Dashboard-Visuals/blob/main/README.md",
+    link: "https://github.com/Rajkumar-dataanalyst/PowerBi_Dashboard-Visuals",
     category: "powerbi"
   },
   {
     title: "Tableau Dashboard - Swiggy Analysis",
     description: "Visualized Swiggy Food and Business trends using Tableau.",
     image: "tableu1.png",
-    link: "https://github.com/Rajkumar-dataanalyst/Swiggy_Analysis/blob/main/README.md",
+    link: "https://github.com/Rajkumar-dataanalyst/Swiggy_Analysis",
     category: "tableau"
   },
   {
     title: "Tableau Dashboard - LinkedIn Posts Analysis.",
     description: "Analyzed the Linkedin Posts trends in Linkedin Website/Application",
     image: "tableu2.png",
-    link: "https://github.com/Rajkumar-dataanalyst/Linked-posts-Analysis/blob/main/README.md",
+    link: "https://github.com/Rajkumar-dataanalyst/Linked-posts-Analysis",
     category: "tableau"
   },
 ];
@@ -274,4 +274,22 @@ contactForm.addEventListener("submit", function (e) {
         resultMessage.style.display = "none";
       }, 4000);
     });
+});
+
+
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const sectionBoxesContainer = document.querySelector(".section-boxes");
+const hamburgerIcon = hamburgerBtn.querySelector("i");
+
+hamburgerBtn.addEventListener("click", () => {
+  sectionBoxesContainer.classList.toggle("active");
+
+  // Toggle between hamburger (bars) and cross (times)
+  if (sectionBoxesContainer.classList.contains("active")) {
+    hamburgerIcon.classList.remove("fa-bars");
+    hamburgerIcon.classList.add("fa-times");
+  } else {
+    hamburgerIcon.classList.remove("fa-times");
+    hamburgerIcon.classList.add("fa-bars");
+  }
 });
