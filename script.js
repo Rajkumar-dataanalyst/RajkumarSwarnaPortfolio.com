@@ -106,42 +106,42 @@ const projects = [
     title: "Excel Dashboard - Sales Analysis",
     description: "Created an interactive sales dashboard using Excel.",
     image: "excel1.png",
-    link: "https://github.com/Rajkumar-dataanalyst/Excel_Dashboard",
+    link: "https://github.com/Rajkumar-dataanalyst/Excel_Dashboard/blob/main/README.md",
     category: "excel"
   },
   {
     title: "Excel Dashboard - FnP Sales Analysis",
     description: "Built an Analyzed report dashboard with pivot tables and charts.",
     image: "excel2.png",
-    link: "https://github.com/Rajkumar-dataanalyst/fnp-Sales-Analysis",
+    link: "https://github.com/Rajkumar-dataanalyst/fnp-Sales-Analysis/blob/main/README.md",
     category: "excel"
   },
   {
     title: "Power BI Dashboard - Facebook Ads Analytics",
     description: "Visualized FB-Ads Trends and Analysis.",
     image: "powerbi1.png",
-    link: "https://github.com/Rajkumar-dataanalyst/FB_Ads-Analysis",
+    link: "https://github.com/Rajkumar-dataanalyst/FB_Ads-Analysis/blob/main/README.md",
     category: "powerbi"
   },
   {
     title: "Power BI Dashboard - Financial Analytics",
     description: "Analyzed the Financial Status.",
     image: "powerbi2.png",
-    link: "https://github.com/Rajkumar-dataanalyst/PowerBi_Dashboard-Visuals",
+    link: "https://github.com/Rajkumar-dataanalyst/PowerBi_Dashboard-Visuals/blob/main/README.md",
     category: "powerbi"
   },
   {
     title: "Tableau Dashboard - Swiggy Analysis",
     description: "Visualized Swiggy Food and Business trends using Tableau.",
     image: "tableu1.png",
-    link: "https://github.com/Rajkumar-dataanalyst/Swiggy_Analysis",
+    link: "https://github.com/Rajkumar-dataanalyst/Swiggy_Analysis/blob/main/README.md",
     category: "tableau"
   },
   {
     title: "Tableau Dashboard - LinkedIn Posts Analysis.",
     description: "Analyzed the Linkedin Posts trends in Linkedin Website/Application",
     image: "tableu2.png",
-    link: "https://github.com/Rajkumar-dataanalyst/Linked-posts-Analysis",
+    link: "https://github.com/Rajkumar-dataanalyst/Linked-posts-Analysis/blob/main/README.md",
     category: "tableau"
   },
 ];
