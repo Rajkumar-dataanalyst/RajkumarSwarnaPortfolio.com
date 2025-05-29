@@ -299,7 +299,7 @@ body.light-mode #home {
   .home-container {
     flex-direction: column;
     text-align: center;
-    padding-top: 1in;
+    padding-top: 0.5px;
   }
 
   .home-text {
@@ -941,8 +941,9 @@ body.light-mode .top-bar {
 
 /* Ensure space between top bar and first section */
 .full-page {
-  padding-top: 100px !important;
+  padding-top: 60px !important;
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -961,5 +962,40 @@ body.light-mode .top-bar {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+  }
+}
+
+/* ===== Hamburger Menu Styles (Mobile Only) ===== */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 10px;
+  order: -1; /* Moves it to the left side in flex */
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .section-boxes {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: var(--background-dark);
+  }
+
+  body.light-mode .section-boxes {
+    background: var(--background-light);
+  }
+
+  .section-boxes.active {
+    display: flex;
   }
 }
