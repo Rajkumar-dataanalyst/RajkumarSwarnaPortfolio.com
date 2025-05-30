@@ -941,7 +941,7 @@ body.light-mode .top-bar {
 
 /* Ensure space between top bar and first section */
 .full-page {
-  padding-top: 60px !important;
+  padding-top: 1px !important;
 }
 
 
