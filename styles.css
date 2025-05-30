@@ -16,6 +16,7 @@ body, html {
   color: var(--text-light);
   background: var(--background-dark);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body.light-mode {
