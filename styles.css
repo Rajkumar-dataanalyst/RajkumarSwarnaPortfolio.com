@@ -16,7 +16,6 @@ body, html {
   color: var(--text-light);
   background: var(--background-dark);
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body.light-mode {
@@ -192,13 +191,10 @@ body.light-mode #home {
 
 .home-text {
   flex: 1;
-  max-width: 100%;
+  max-width: 60%;
   text-align: left;
   margin-left: 20px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
-
 
 .home-text h2.highlight {
   font-size: 2.5em;
@@ -863,17 +859,12 @@ footer p {
   gap: 10px;
   overflow-x: auto;
   white-space: nowrap;
-  padding: 6px 12px;
+  padding: 10px 20px;
   background: var(--background-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
-
 
 .top-bar::-webkit-scrollbar {
   display: none;
@@ -897,7 +888,6 @@ body.light-mode .top-bar {
   white-space: nowrap;
   scroll-behavior: smooth;
   padding-bottom: 10px;
-  max-width: 100%;
 }
 
 .section-boxes::-webkit-scrollbar {
@@ -951,7 +941,7 @@ body.light-mode .top-bar {
 
 /* Ensure space between top bar and first section */
 .full-page {
-  padding-top: 50px !important;
+  padding-top: 60px !important;
 }
 
 
