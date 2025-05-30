@@ -941,7 +941,7 @@ body.light-mode .top-bar {
 
 /* Ensure space between top bar and first section */
 .full-page {
-  padding-top: 100px !important;
+  padding-top: 10px !important;
 }
 
 
@@ -997,32 +997,5 @@ body.light-mode .top-bar {
 
   .section-boxes.active {
     display: flex;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .top-bar {
-    padding: 5px 10px;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .hamburger,
-  .theme-icon {
-    font-size: 1.5em;
-    padding: 5px;
-    margin: 0;
-  }
-
-  .toggle-container {
-    margin-top: 0;
-    align-self: center;
-  }
-
-  .section-boxes {
-    top: 50px; /* adjusted for reduced height */
   }
 }
