@@ -729,60 +729,6 @@ body.light-mode .form-group textarea {
   box-shadow: 0 6px 12px rgba(14, 239, 255, 0.5);
 }
 
-/* Social Links */
-.social-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 25px;
-  background: #1a1a1a;
-  color: var(--text-light);
-  text-decoration: none;
-  border-radius: 8px;
-  border: 2px solid var(--primary-color);
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-body.light-mode .social-link {
-  background: var(--background-light);
-  color: var(--text-dark);
-  border: 2px solid var(--secondary-color);
-}
-
-.social-link.active, .social-link:hover {
-  background: var(--primary-color);
-  color: #000;
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(14, 239, 255, 0.7);
-}
-
-body.light-mode .social-link.active, body.light-mode .social-link:hover {
-  background: var(--secondary-color);
-  color: #fff;
-}
-
-.social-link i {
-  font-size: 1.5em;
-  transition: color 0.3s ease;
-}
-
-.social-link:hover i {
-  color: #000;
-}
-
-.social-link span {
-  font-size: 1em;
-  font-weight: bold;
-}
 
 /* Footer */
 footer {
@@ -999,3 +945,4 @@ body.light-mode .top-bar {
     display: flex;
   }
 }
+
