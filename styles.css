@@ -357,6 +357,20 @@ body.light-mode #about p {
   color: var(--text-dark);
 }
 
+/* OsfinAI Link Styling */
+#about a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#about a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  opacity: 0.8;
+}
+
 /* Skills Section */
 #skills {
   background: var(--background-dark);
@@ -945,4 +959,5 @@ body.light-mode .top-bar {
     display: flex;
   }
 }
+
 
